@@ -1,0 +1,218 @@
+[
+    {
+        "modulo": "FBS_ACTIVOSFIJOS",
+        "cantidad_tablas": 395,
+        "descripcion_ia": "El módulo de base de datos 'FBS_ACTIVOSFIJOS' tiene como propósito principal el registro, seguimiento y gestión de activos fijos. Contiene información sobre los activos en sí (tabla `ACTIVO`), así como detalles sobre los accesorios asociados a estos activos (tabla `ACCESORIO`) y, crucialmente, registros sobre las bajas o desincorporaciones de accesorios (tabla `ACCESORIO_BAJA`). Esto sugiere un sistema diseñado para cubrir todo el ciclo de vida de los activos fijos, desde su adquisición hasta su eliminación."
+    },
+
+    {
+        "modulo": "FBS_BANKINGLY",
+        "cantidad_tablas": 74,
+        "descripcion_ia": "El módulo de base de datos 'FBS_BANKINGLY' parece estar dedicado al procesamiento y almacenamiento de transacciones bancarias, probablemente dentro de un entorno de integración con una entidad externa o como parte de un sistema de banca en línea.  Almacena parámetros de configuración (EMPRESA_PARAMETROBANKINGLY), historial de transacciones (HISTORICOTRANSACCION) y solicitudes de transacciones en lote con sus respectivos detalles (SOLICITUDTRANSACCIONENLOTE y SOLICITUDTRANSACCIONENLOTEDETALLE). En resumen, gestiona el ciclo de vida de las transacciones bancarias, desde la configuración hasta el registro histórico."
+    },
+    {
+        "modulo": "FBS_CAJAS",
+        "cantidad_tablas": 615,
+        "descripcion_ia": "El módulo de base de datos \"FBS_CAJAS\" gestiona la información relacionada con las cajas fuertes (o bóvedas) de una institución financiera.  Parece enfocarse en el control y registro de autorizaciones para montos de dinero en las cajas, la gestión de las bóvedas en sí mismas (incluyendo sus componentes, series de denominaciones de billetes, y usuarios afectados), y la trazabilidad de las operaciones realizadas sobre ellas. La repetición de algunas tablas sugiere una posible estructura histórica o versiones de un sistema."
+    },
+    {
+        "modulo": "FBS_CAPTACIONESPLAZO",
+        "cantidad_tablas": 558,
+        "descripcion_ia": "El módulo de base de datos 'FBS_CAPTACIONESPLAZO' tiene como propósito principal gestionar la información relacionada con captaciones a plazo fijo. Almacena detalles sobre los diferentes componentes que conforman estas captaciones, incluyendo capital, intereses (con sus diferentes tipos: acreditados, retenidos, etc.), y tasas aplicables, desglosados por período de tiempo (plazo). Las tablas sugieren un nivel de detalle muy granular para el cálculo y seguimiento de los rendimientos y componentes de las captaciones a plazo. Además, parece incluir información sobre tasas de castigo asociadas a estas captaciones."
+    },
+    {
+        "modulo": "FBS_CAPTACIONESVISTA",
+        "cantidad_tablas": 1597,
+        "descripcion_ia": "El módulo de base de datos 'FBS_CAPTACIONESVISTA' parece estar dedicado al procesamiento y visualización de datos relacionados con captaciones, activaciones y utilidades asociadas a cuentas y acreditaciones.  Las tablas sugieren un enfoque en la gestión de acreditaciones en lotes (en proceso), la activación de cuentas, la asignación de cajeros, el cálculo de utilidades (tanto generales como específicas para acreditaciones y préstamos), y el registro de motivos de protesto de cheques. En resumen, centraliza la información necesaria para el control y la gestión de las captaciones y sus procesos asociados."
+    },
+    {
+        "modulo": "FBS_CARTERADIGITAL",
+        "cantidad_tablas": 91,
+        "descripcion_ia": "El módulo de base de datos 'FBS_CARTERADIGITAL' parece estar dedicado a la gestión y procesamiento de información relacionada con una cartera digital.  Su función principal es la administración de transacciones, conciliaciones de pagos, registro de parámetros de empresa para la cartera, y el mantenimiento de un histórico detallado de las transacciones y sus causas, probablemente para fines de auditoría, reporte, y análisis. La presencia de tablas como 'HISTORICOTRANSACCIONCARTERADIGITAL' y 'REGISTROTRANSACCIONENLOTE' sugiere una capacidad para procesar grandes volúmenes de datos y mantener un registro de cambios a lo largo del tiempo."
+    },
+    {
+        "modulo": "FBS_CARTERA",
+        "cantidad_tablas": 1769,
+        "descripcion_ia": "El módulo de base de datos 'FBS_CARTERA'  esta dedicado a la gestión de la cartera de préstamos de la institución financiera.la tabla prestamomaestro es la tabla princial de los prestamo Específicamente, se enfoca en el procesamiento y seguimiento de pagos en lotes (abonos a préstamos en lote), así como en la programación, archivo y cálculo de utilidades relacionadas con estos préstamos. La presencia de tablas como 'ABONOPRESTAMOENLOTE', 'ARCHIVOABONOPRESTAMOENLOTE', 'ARCHIVOREPROGRAMACION' y 'CALCULOUTILIDADPRESTAMO' lo confirma. Además, incluye elementos para el cálculo de la calificación de cuentas en relación con intereses referenciales."
+    },
+    {
+        "modulo": "FBS_CAUSALES",
+        "cantidad_tablas": 146,
+        "descripcion_ia": "El módulo 'FBS_CAUSALES' tiene como propósito principal gestionar y detallar las **causales relacionadas con impuestos y oficinas**.  Parece que permite descomponer una causal general en diferentes componentes, considerando aspectos como impuestos, oficinas, tipo de producto, cajas, y otros factores específicos, como el rol o tipo de impuesto aplicable.  En esencia, permite un análisis granular y estructurado de las causas o motivos subyacentes a las obligaciones fiscales y administrativas asociadas a las oficinas."
+    },
+    {
+        "modulo": "FBS_CIERRESFINANCIEROS",
+        "cantidad_tablas": 45,
+        "descripcion_ia": "El módulo de base de datos 'FBS_CIERRESFINANCIEROS' gestiona el proceso de cierres financieros. Sus tablas sugieren que almacena información relacionada con calendarios de fin de período (CALENDARIO_FINDIA), fechas de cierre específicas (FECHACIERREETAPA y FECHACIERREETAPADETALLE), información sobre clientes y sus fechas de procesamiento (CLIENTE_FECHAPROCESO), parámetros de configuración para el proceso de cierre (PARAMETROPROCESOCIERRE), el registro y control del proceso de cierre en sí mismo (PROCESOCIERRE), notificaciones por correo electrónico (CORREONOTIFICACION) y probablemente datos asociados a la finalización de etapas o periodos contables."
+    },
+    {
+        "modulo": "FBS_CLIENTES",
+        "cantidad_tablas": 633,
+        "descripcion_ia": "El módulo de base de datos 'FBS_CLIENTES' está diseñado para gestionar información relacionada con clientes, probablemente en un contexto de campañas de marketing o ventas, y potencialmente para una empresa de servicios financieros dado los nombres de algunas tablas.  Las tablas sugieren un sistema que almacena detalles de clientes, sus anexos (posiblemente documentos), campañas en las que participan, códigos de productos asociados a esas campañas, datos sobre socios o agentes involucrados, información sobre cargos (posiblemente laborales o financieros), detalles de remitentes, certificaciones, etc."
+    },
+    {
+        "modulo": "FBS_COBRANZAS",
+        "cantidad_tablas": 473,
+        "descripcion_ia": "El módulo de base de datos 'FBS_COBRANZAS' está diseñado para gestionar información relacionada con la gestión de cobranzas, específicamente enfocada en abogados. Almacena datos sobre abogados, sus oficinas, auxiliares contables, cuentas maestras, detracciones, impuestos, retenciones (ITBIS), así como información sobre las acciones, actividades de gestión de cobranzas extrajudiciales y otros detalles asociados a este proceso. En resumen, es un sistema de gestión de cobranzas centrado en el ámbito legal."
+    },
+    {
+        "modulo": "FBS_CONTABILIDADES",
+        "cantidad_tablas": 2060,
+        "descripcion_ia": "El módulo de base de datos 'FBS_CONTABILIDADES' tiene como propósito principal la gestión de la información contable de la entidad. Incluye tablas relacionadas con activos diferidos, cuentas por conciliar, acumuladores, registros de caja chica (incluyendo impuestos IGV, renta y pagos exteriores) y probablemente, otras funcionalidades clave para llevar a cabo el proceso contable de la empresa. La repetición de algunas tablas sugiere una estructura específica o posiblemente una necesidad de redundancia en el sistema."
+    },
+    {
+        "modulo": "FBS_CREDITO",
+        "cantidad_tablas": 2681,
+        "descripcion_ia": "El módulo de base de datos `FBS_CREDITO` está diseñado para gestionar el proceso de solicitudes de crédito, específicamente con un enfoque en la relación con ahorros. Las tablas presentes indican que almacena información relacionada con solicitudes de crédito, los tipos de garantías asociadas a estas solicitudes, anexos de las solicitudes, aportes patrimoniales, y, de manera muy destacada, evaluaciones de garantías hipotecarias. En resumen, el módulo parece centrarse en la administración y seguimiento de solicitudes de crédito con respaldo en ahorros y garantías, con un fuerte componente de gestión de documentación y valoración de activos."
+    },
+    {
+        "modulo": "FBS_CUENTASPORCOBRAR",
+        "cantidad_tablas": 108,
+        "descripcion_ia": "El módulo 'FBS_CUENTASPORCOBRAR' está diseñado para gestionar la información relacionada con cuentas por cobrar. Al observar los nombres de las tablas, se deduce que este módulo se encarga de almacenar datos sobre clientes, tipos de rubros por cobrar, información de préstamos asociados a clientes, detalles de cargos, y registros de información de préstamos, probablemente para fines de seguimiento y control de deudas pendientes."
+    },
+    {
+        "modulo": "FBS_CUENTASPORPAGAR",
+        "cantidad_tablas": 48,
+        "descripcion_ia": "El módulo de base de datos 'FBS_CUENTASPORPAGAR' tiene como propósito principal el registro y gestión de las cuentas por pagar de una organización. Almacena información detallada sobre rubros a pagar, la frecuencia de los pagos, movimientos de rubros por pagar, cuotas asociadas a esos pagos, y la información contable auxiliar relacionada con los rubros de pago. La repetición de tablas sugiere una gran cantidad de datos o una estructura de diseño que necesita revisión."
+    },
+    {
+        "modulo": "FBS_ESTRUCTURAS",
+        "cantidad_tablas": 44,
+        "descripcion_ia": "El módulo de base de datos 'FBS_ESTRUCTURAS' tiene como propósito principal la gestión y definición de estructuras de datos o modelos de información.  Esto se deduce del nombre y de la presencia de tablas como 'ESTRUCTURA', 'ESTRUCTURAARCHIVO', 'ESTRUCTURAPROCESAMIENTO', 'ESTRUCTURARESPONSABLE' y 'PERIODICIDADESTRUCTURA', las cuales sugieren la definición de estructuras, archivos asociados, procesos, responsables y periodicidades relacionados con estas estructuras. En resumen, almacena la definición y metadatos de diversas estructuras."
+    },
+    {
+        "modulo": "FBS_GENERALES",
+        "cantidad_tablas": 772,
+        "descripcion_ia": "El módulo de base de datos 'FBS_GENERALES' parece contener información general y de referencia relacionada con entidades financieras, principalmente bancos. Sus tablas sugieren que almacena datos sobre bancos (identificación, detalles, archivos asociados), sus agencias, empresas relacionadas, información adicional y, repetidamente, información de ayuda de tipo 'DIVISION' (lo que podría indicar una estructura jerárquica o de clasificación de datos). En resumen, es un módulo de datos maestros para la gestión de información bancaria y entidades financieras relacionadas."
+    },
+    {
+        "modulo": "FBS_GERENCIALES",
+        "cantidad_tablas": 115,
+        "descripcion_ia": "El módulo de base de datos 'FBS_GERENCIALES' está diseñado para la gestión y análisis de información financiera y de gestión.  Parece contener definiciones de conceptos clave (tablas `FBS_GERENCIALES.CONCEPTO` y `FBS_GERENCIALES.CONCEPTODETALLE`), sus relaciones con funciones (`FBS_GERENCIALES.CONCEPTOFUNCION`), y mecanismos para la visualización de datos (tablas `FBS_GERENCIALES.GRAFICO`, `FBS_GERENCIALES.GRAFICOROL`, `FBS_GERENCIALES.GRAFICOTIPOFILTRO`). Además, incluye información sobre indicadores financieros (`FBS_GERENCIALES.INDICADORFINANCIERO`), sugiriendo que el módulo soporta la creación de informes y dashboards para el análisis de la performance gerencial."
+    },
+    {
+        "modulo": "FBS_GESTIONDOCUMENTAL",
+        "cantidad_tablas": 36,
+        "descripcion_ia": "El módulo de base de datos 'FBS_GESTIONDOCUMENTAL' parece estar diseñado para la gestión de documentos, centrándose en el control de envíos a clientes (a través de las tablas 'ENVIOCLIENTEOKM') y el manejo de los documentos asociados, incluyendo su tipificación ('TIPODOCUMENTOGESTIONDOCUMENTAL') y la gestión de sus ítems o componentes ('ITEMDOCUMENTO'). La presencia repetida de 'ENVIOOKM' sugiere una posible variante o implementación específica de los envíos. En resumen, su propósito principal es el seguimiento y control de envíos documentales a clientes, con gestión de los documentos que los componen."
+    },
+    {
+        "modulo": "FBS_HISTORICOS",
+        "cantidad_tablas": 7,
+        "descripcion_ia": "El módulo de base de datos 'FBS_HISTORICOS' tiene como propósito principal almacenar registros históricos de datos relacionados con tiempos de ejecución. La repetición de la tabla \"TIEMPOEJECUCION\" sugiere que se están registrando múltiples aspectos o detalles relacionados con el tiempo de ejecución a lo largo del tiempo. Es probable que sirva para auditoría, análisis de rendimiento o para reconstruir el estado de un sistema en un momento dado."
+    },
+    {
+        "modulo": "FBS_INTERNETHUB",
+        "cantidad_tablas": 22,
+        "descripcion_ia": "El módulo de base de datos 'FBS_INTERNETHUB' tiene como propósito principal el registro y seguimiento de interacciones y operaciones relacionadas con clientes a través de canales digitales o 'internet'.  Específicamente, almacena el historial de mensajes entre clientes y asesores (indicado por las tablas 'HISTORIALMENSAJECLIENTE_ASESOR') y el historial de simulaciones de crédito (tablas 'HISTORIALSIMULADORCREDITO'), sugiriendo que se utiliza para gestionar la relación con el cliente y ofrecer servicios financieros en línea."
+    },
+    {
+        "modulo": "FBS_INVENTARIOS",
+        "cantidad_tablas": 586,
+        "descripcion_ia": "El módulo de base de datos 'FBS_INVENTARIOS' está diseñado para gestionar la información relacionada con el control y administración de inventarios.  Su función principal es realizar el seguimiento de los almacenes (ALMACEN), incluyendo su relación con bodegas (ALMACENBODEGA), el porcentaje de utilidad asociado (ALMACENPORCENTAJEUTILIDAD), los usuarios autorizados para acceder a ellos (ALMACENUSUARIOAUTORIZADO), las causas de transferencia (ALMACEN_CAUSALTRANSFERENCIA), información de crédito para comisariatos (ALMACEN_CREDITO_COMISARIATO) y los porcentajes de utilidad para créditos (ALMACEN_CREDITO_PORCENTAJEUTILIDAD). En resumen, controla el flujo y los datos asociados a los bienes almacenados."
+    },
+    {
+        "modulo": "FBS_LAVADOACTIVOS",
+        "cantidad_tablas": 589,
+        "descripcion_ia": "El módulo de base de datos 'FBS_LAVADOACTIVOS' tiene como propósito principal el soporte de procesos relacionados con la detección y prevención de lavado de activos y financiamiento del terrorismo.  Las tablas sugieren que almacena información sobre condiciones de calificación de transacciones, tanto absolutas como relativas, definidas por factores como la frecuencia y el monto de las mismas. Además, incluye una categorización de tipos de identificación.  En resumen, sirve para definir reglas y criterios para la evaluación de riesgos de lavado de activos."
+    },
+    {
+        "modulo": "FBS_LOGS",
+        "cantidad_tablas": 182,
+        "descripcion_ia": "El módulo de base de datos 'FBS_LOGS' tiene como propósito principal la gestión y almacenamiento de registros de auditoría y eventos del sistema.  A partir de los nombres de las tablas (como ACCESOUSUARIO, ACCESOUSUARIOMOVIL, ACCIONROL, ACCIONUSUARIO, AUDITORIADATABASE, AUDITORIAOPERACION), se deduce que registra accesos de usuarios, acciones realizadas por roles y usuarios, así como auditorías de la base de datos y operaciones a nivel de sistema.  Esencialmente, proporciona un registro detallado de la actividad dentro del sistema para fines de seguridad, trazabilidad y cumplimiento normativo."
+    },
+    {
+        "modulo": "FBS_MIGRACION",
+        "cantidad_tablas": 570,
+        "descripcion_ia": "El módulo 'FBS_MIGRACION' parece estar diseñado para gestionar datos migrados. Con base en los nombres de las tablas (Actividad Económica, Ahorro Programado, Área, Ayuda a Cajachica, Ayuda a Bóvedas, Ayuda Contable, etc.), su propósito principal es albergar y organizar información relacionada con la migración de datos de entidades financieras o programas sociales, específicamente datos concernientes a actividades económicas, ahorro, áreas geográficas, y diferentes tipos de ayudas o subsidios ofrecidos.  Es probable que contenga datos que fueron trasladados desde un sistema anterior a uno nuevo, preservando información importante para su uso continuo."
+    },
+    {
+        "modulo": "FBS_NEGOCIOSFINANCIEROS",
+        "cantidad_tablas": 517,
+        "descripcion_ia": "El módulo 'FBS_NEGOCIOSFINANCIEROS' tiene como propósito principal gestionar y almacenar información relacionada con las operaciones y procesos de negocios financieros.  Las tablas sugieren un enfoque en el registro de detalles de canales de negociación, componentes de transacciones financieras (incluyendo tipos de movimiento, áreas, cuentas contables y auxiliares contables), documentos relacionados, parámetros de tasas de referencia de empresas y, posiblemente, la validación de datos (caracteres no válidos para ROTEF). En resumen, se trata de un módulo para la administración integral de aspectos financieros y contables de las operaciones empresariales."
+    },
+    {
+        "modulo": "FBS_NOMINA",
+        "cantidad_tablas": 1696,
+        "descripcion_ia": "El módulo de base de datos 'FBS_NOMINA' está diseñado para gestionar información relacionada con las acciones del personal dentro de un proceso de nómina. Las tablas sugieren el registro y seguimiento de cambios de cargo, historial de estados de personal, permisos (días y horas) y cumplimiento de días y horas, incluyendo detalles sobre permisos cumplidos, horas cumplidas, y reemboldos asociados a estos elementos. En resumen, se trata de un módulo que controla el ciclo de vida de la información del personal desde la perspectiva de la nómina y gestión de permisos."
+    },
+    {
+        "modulo": "FBS_OBLIGACIONES",
+        "cantidad_tablas": 696,
+        "descripcion_ia": "El módulo 'FBS_OBLIGACIONES' probablemente gestiona información relacionada con obligaciones financieras, específicamente acciones y sus componentes. Aparentemente, se enfoca en el registro y cálculo de aspectos contables asociados a estas obligaciones, incluyendo el cálculo de cargos iniciales, causas de activación, componentes de ajustes, y diversos componentes de la obligación (capital, intereses, relacionados) y sus detalles adicionales. El esquema parece estar diseñado para un sistema de contabilidad o gestión financiera que requiere un control granular sobre los elementos que componen estas obligaciones."
+    },
+    {
+        "modulo": "FBS_ORGANIZACIONES",
+        "cantidad_tablas": 151,
+        "descripcion_ia": "El módulo de base de datos 'FBS_ORGANIZACIONES' tiene como propósito principal gestionar la información relacionada con la estructura organizativa de una entidad. Contiene datos sobre áreas, departamentos, jerarquías (directivos), su distribución, porcentajes de distribución modificados (tanto en encabezado como en detalle), calendarios de feriados y la relación entre departamentos y áreas. En resumen, se enfoca en la administración de datos estructurales y organizativos de la empresa."
+    },
+    {
+        "modulo": "FBS_PERSONAS",
+        "cantidad_tablas": 898,
+        "descripcion_ia": "El módulo de base de datos 'FBS_PERSONAS' tiene como propósito principal el almacenamiento y gestión de información relacionada con personas, incluyendo datos de representantes legales ('APODERADO'), cargas familiares ('CARGASFAMILIARES'), categorías profesionales ('CATEGORIAPROFESION'), causas de vinculación, parámetros de carga de listas de empresas, validaciones para actualizaciones empresariales, estado civil y otras variables asociadas a la gestión de individuos."
+    },
+    {
+        "modulo": "FBS_PORTAFOLIO",
+        "cantidad_tablas": 433,
+        "descripcion_ia": "El módulo de base de datos 'FBS_PORTAFOLIO' probablemente gestiona información relacionada con la administración y análisis de carteras de inversión o productos financieros.  El nombre \"PORTAFOLIO\" indica un enfoque en la gestión de activos, mientras que \"FBS\" podría indicar una sigla interna de la organización. Las tablas, como \"BANCOCONTROL\", \"CALIFICACIONINVERSION\", \"CALIFICACIONRIESGO\" y las tablas relacionadas con \"PROVISIONINTERES\" sugieren que el módulo rastrea información sobre cuentas bancarias, evaluaciones de riesgo y rendimiento de inversiones, incluyendo cálculos de intereses provisionados."
+    },
+    {
+        "modulo": "FBS_PRESUPUESTOS",
+        "cantidad_tablas": 203,
+        "descripcion_ia": "El módulo 'FBS_PRESUPUESTOS' tiene como propósito principal la gestión y el almacenamiento de información relacionada con presupuestos. Esto incluye datos sobre parámetros de presupuestos por empresa, la definición de ítems meta, sus métodos de cálculo, las metas específicas, cierres presupuestarios, la asignación de presupuestos a cuentas contables (incluyendo auxiliares), y la estructura general de los presupuestos definidos.  Parece centrarse en el control y detalle de la elaboración presupuestaria."
+    },
+    {
+        "modulo": "FBS_RECAUDACIONES",
+        "cantidad_tablas": 27,
+        "descripcion_ia": "El módulo de base de datos 'FBS_RECAUDACIONES' tiene como propósito principal gestionar y almacenar información relacionada con las **recaudaciones**.  Los nombres de las tablas, como `CANALINTERFAZ`, `EMPRESA_PARAMETROINTERFAZ`, `FORMAPAGOINTERFAZ` y `HISTORICORECAUDACIONES`, sugieren que el módulo abarca aspectos como los canales de recaudación, la configuración de empresas para las interfaces, los métodos de pago y el registro del historial de las mismas."
+    },
+    {
+        "modulo": "FBS_REMESAS",
+        "cantidad_tablas": 117,
+        "descripcion_ia": "El módulo de base de datos 'FBS_REMESAS' está diseñado para gestionar la información y el proceso de remesas, específicamente relacionadas con cheques.  Parece enfocarse en el ciclo de vida completo de un cheque, desde su emisión, pasando por su transferencia (incluyendo transferencias a bóvedas), su relación con cuentas, clientes, bancos y agencias, hasta su depósito, efectivización y manejo de posibles depósitos. La gran cantidad de tablas indica una gestión muy detallada de los datos asociados a cada cheque."
+    },
+    {
+        "modulo": "FBS_REPORTES",
+        "cantidad_tablas": 299,
+        "descripcion_ia": "El módulo de base de datos 'FBS_REPORTES' tiene como propósito principal el almacenamiento y organización de datos relacionados con la generación de informes financieros.  Las tablas contenidas sugieren un enfoque en la construcción de estados financieros, análisis comparativos de ingresos y gastos, codificación de garantías, y la conexión entre cuentas contables y flujos de efectivo, así como el manejo de sobregiradas. En resumen, sirve como un repositorio para la información necesaria para la elaboración y análisis de reportes financieros."
+    },
+    {
+        "modulo": "FBS_REPOSITORIOCONTABLE",
+        "cantidad_tablas": 92,
+        "descripcion_ia": "El módulo de base de datos 'FBS_REPOSITORIOCONTABLE' tiene como propósito principal el almacenamiento y gestión de registros contables. La repetición de la tabla \"REGISTROCONTABLE\" y la presencia de tablas relacionadas como \"REGISTROCONTABLEAREA\", \"REGISTROCONTABLE_AUXILIARCBLE\", \"REGISTROCONTABLE_DOCUMENTOBAN\", \"REGISTROCONTABLE_INFORMACIONADICIONAL\", \"REGISTROCONTABLE_MOVIMIENTOCONTROL\", \"REGISTROCONTABLE_MOVIMIENTODETALLE\", y \"REGISTROCONTABLE_copy1\" indican que abarca la gestión integral de transacciones contables, incluyendo sus áreas, auxiliares, documentos asociados, información adicional, movimientos de control y detalle, así como copias o versiones de registros contables."
+    },
+    {
+        "modulo": "FBS_SEGURIDADESFBS",
+        "cantidad_tablas": 105,
+        "descripcion_ia": "El módulo de base de datos 'FBS_SEGURIDADESFBS' está diseñado para gestionar la seguridad y los permisos de acceso a funcionalidades dentro de un sistema. Almacena información sobre menús, funcionalidades, métodos de acceso (incluyendo características personalizadas), módulos y presentadores, facilitando el control de roles y la limitación de acceso a determinadas áreas o acciones para diferentes usuarios. El módulo parece centrarse en la definición de la estructura y el control de acceso, más que en el almacenamiento de datos del negocio en sí."
+    },
+    {
+        "modulo": "FBS_SEGURIDADES",
+        "cantidad_tablas": 271,
+        "descripcion_ia": "El módulo de base de datos 'FBS_SEGURIDADES' parece estar dedicado a la gestión de **seguridad y validación de procesos relacionados con empresas**.  Alberga información sobre calificaciones, restricciones de claves para empresas, parámetros de validación específicos para cada empresa (según canal: web, móvil, general) y la gestión de excepciones y mensajes para sistemas FMS (probablemente un sistema de gestión financiera). En resumen, su propósito es controlar y asegurar la integridad de las operaciones empresariales desde una perspectiva de seguridad y validación."
+    },
+    {
+        "modulo": "FBS_SEGUROS",
+        "cantidad_tablas": 102,
+        "descripcion_ia": "El módulo de base de datos 'FBS_SEGUROS' tiene como propósito principal la gestión de información relacionada con seguros. Al observar las tablas incluidas (ESTADOSEGURO, SEGUROBENEFICIARIO, SEGUROCLIENTE, SEGUROCOBRO, SEGUROMAESTRO, SEGUROCTACOMPVIS_DEBITA), se deduce que almacena datos sobre el estado de los seguros, los beneficiarios, los clientes asegurados, los cobros relacionados, la información maestra de los seguros y, específicamente, datos sobre las \"Compensaciones Visibles por Débito\" asociadas a los seguros. En resumen, administra el ciclo de vida de los seguros y aspectos financieros relevantes."
+    },
+    {
+        "modulo": "FBS_TESORERIA",
+        "cantidad_tablas": 42,
+        "descripcion_ia": "El módulo 'FBS_TESORERIA' gestiona el ciclo de vida de documentos de seguridad relacionados con la tesorería.  Almacena información sobre los documentos de seguridad en sí (FBS_TESORERIA.DOCUMENTOSEGURIDAD), el historial de cambios de estado (FBS_TESORERIA.DOCUMENTOSEGURIDADCAMBIOESTADO), sus movimientos (FBS_TESORERIA.DOCUMENTOSEGURIDAD_MOVIMIENTO), parámetros asociados a empresas (FBS_TESORERIA.EMPRESA_PARAMETRODOCUMENTOSEGURIDAD), estados disponibles (FBS_TESORERIA.ESTADODOCUMENTOSEGURIDAD), reglas de proceso por tipo de documento y estado (FBS_TESORERIA.TIPODOCSEGUSUARIOPROCESAESTADO) y los tipos de documentos de seguridad (FBS_TESORERIA.TIPODOCUMENTOSEGURIDAD). En resumen, centraliza la administración y control de documentos con implicaciones de seguridad financiera."
+    },
+    {
+        "modulo": "FBS_VALIDACIONES",
+        "cantidad_tablas": 10,
+        "descripcion_ia": "El módulo de base de datos 'FBS_VALIDACIONES' tiene como propósito principal gestionar y almacenar información relacionada con procesos de validación.  Las tablas 'VALIDACION' probablemente contienen la información general de cada validación (fecha, usuario, estado, etc.) mientras que las tablas 'VALIDACIONDETALLE' almacenan los detalles específicos o los resultados de cada validación individual, posiblemente asociados a una validación principal. En conjunto, el módulo sirve para documentar, rastrear y controlar diversos tipos de validaciones dentro del sistema."
+    },
+    {
+        "modulo": "FBS_VALIDACIONTRANSACCIONAL",
+        "cantidad_tablas": 174,
+        "descripcion_ia": "El módulo de base de datos FBS_VALIDACIONTRANSACCIONAL está diseñado para la validación de transacciones, probablemente financieras o relacionadas con procesos que requieren verificación. La repetición de la tabla \"ANEXO2\" y la presencia de tablas como \"OPERACIONSOSPECHOSA\" y \"ANEXO2DOCUMENTOSADJUNTOS\" sugieren que el módulo gestiona información complementaria a la transacción principal, incluyendo documentación adjunta y datos sobre operaciones sospechosas relacionadas con esas transacciones. Se enfoca en el control y la validación de procesos transaccionales, posiblemente con énfasis en la detección y gestión de riesgos."
+    },
+    {
+        "modulo": "FBS_WORKFLOW",
+        "cantidad_tablas": 53,
+        "descripcion_ia": "El módulo de base de datos 'FBS_WORKFLOW' tiene como propósito principal la gestión y seguimiento de flujos de trabajo (workflows). Las tablas presentes (ETAPA, ETAPARETORNO, GRUPOTRABAJO, GRUPOTRABAJOUSUARIO, PROCESO, TIPOSOLICITUD, TIPOSOLICITUDGRUPOTRABAJO) sugieren que el módulo define etapas dentro de procesos, asigna responsabilidades a grupos de trabajo y usuarios, gestiona tipos de solicitud y define la relación entre tipos de solicitud y grupos de trabajo. En esencia, facilita la automatización y el control de procesos de negocio a través de un sistema de workflows."
+    }
+]
