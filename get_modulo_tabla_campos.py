@@ -2,7 +2,7 @@
 from ia_utils import llamar_api_ia
 # Importar configuración para saber qué proveedor se usa (para la extracción)
 import ai_config
-
+import re
 import json
 import argparse
 import csv
@@ -189,21 +189,45 @@ Tu respuesta JSON:"""
 
         # --- Limpieza robusta de Markdown y Parseo JSON ---
         print(f"DEBUG: Texto crudo recibido de IA: '{texto_respuesta}'") # Ver la respuesta cruda
+        if "<think>" in texto_respuesta and "</think>" in texto_respuesta:
+            texto_respuesta = texto_respuesta.split("<think>")[0] + texto_respuesta.split("</think>")[1]
+            print(f"DEBUG: Texto después de eliminar <think>: '{texto_respuesta}'")
+        
+        # # Eliminar ```json al inicio (con posible espacio/salto de línea)
+        # if texto_respuesta.startswith("```json"):
+        #     texto_respuesta = texto_respuesta[len("```json"):].lstrip() # lstrip() quita espacios/saltos iniciales
+        #     print(f"DEBUG: Texto después de eliminar ```json: '{texto_respuesta}'") # Ver texto limpio
+        # # Eliminar ``` al final (con posible espacio/salto de línea)
+        # if texto_respuesta.endswith("```"):
+        #     texto_respuesta = texto_respuesta[:-len("```")].rstrip() # rstrip() quita espacios/saltos finales
+        #     print(f"DEBUG: Texto después de eliminar ``` al final: '{texto_respuesta}'") # Ver texto limpio
+        
+                # Intentar extraer contenido entre ```json y ``` usando expresiones regulares
+        # El patrón busca ```json, luego captura cualquier cosa (.*?) de forma no codiciosa,
+        # hasta encontrar ```. re.DOTALL permite que '.' coincida con saltos de línea.
+        # \s* permite espacios opcionales alrededor del contenido capturado.
+        pattern = r"```json\s*(.*?)\s*```"
+        match = re.search(pattern, texto_respuesta, re.DOTALL)
 
-        # Eliminar ```json al inicio (con posible espacio/salto de línea)
-        if texto_respuesta.startswith("```json"):
-            texto_respuesta = texto_respuesta[len("```json"):].lstrip() # lstrip() quita espacios/saltos iniciales
-        # Eliminar ``` al final (con posible espacio/salto de línea)
-        if texto_respuesta.endswith("```"):
-            texto_respuesta = texto_respuesta[:-len("```")].rstrip() # rstrip() quita espacios/saltos finales
+        if match:
+            # Si se encuentra el patrón, extraer el grupo capturado (el contenido JSON)
+            texto_para_parsear = match.group(1).strip() # group(1) es el contenido dentro de (.*?)
+            print(f"DEBUG: Contenido extraído entre ```json y ```: '{texto_para_parsear}'")
+        else:
+            # Si no se encuentra el patrón ```json...```, usar el texto como está
+            # (ya potencialmente limpio de <think> tags).
+            # Esto maneja casos donde la IA podría devolver JSON directamente sin los marcadores.
+            texto_para_parsear = texto_respuesta.strip()
+            print(f"DEBUG: No se encontró el patrón ```json...```. Usando texto (posiblemente sin <think>): '{texto_para_parsear}'")
 
-        texto_respuesta = texto_respuesta.strip() # Limpieza final
+        texto_respuesta = texto_para_parsear # Limpieza final
 
         print(f"DEBUG: Texto después de limpiar Markdown: '{texto_respuesta}'") # Ver texto limpio
 
         # Intentar parsear el texto como JSON y extraer 'resultado'
         try:
             data = json.loads(texto_respuesta)
+            print(f"DEBUG: Texto parseado como JSON: {data}") # Ver el JSON parseado
             if isinstance(data, dict) and 'resultado' in data and isinstance(data['resultado'], list):
                  print(f"DEBUG: JSON parseado correctamente. Resultado: {data['resultado']}")
                  return data['resultado']

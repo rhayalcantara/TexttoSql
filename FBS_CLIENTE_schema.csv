@@ -1,0 +1,2 @@
+Table,Column Name,Data Type,Nullable,Key,Default,Extra
+FBS_CLIENTE.CLIENTESACTUALIZADATOSTMP,SECUENCIALCLIENTE,int,NO,PRI,,
